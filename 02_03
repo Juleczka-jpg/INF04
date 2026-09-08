@@ -1,0 +1,19 @@
+﻿namespace Zadanie3_R2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj ocenę: ");
+            double ocena1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Podaj ocenę: ");
+            double ocena2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Podaj ocenę: ");
+            double ocena3 = Convert.ToDouble(Console.ReadLine());
+
+            double srednia = (ocena1 + ocena2 + ocena3) / 3;
+
+            Console.WriteLine($"Średnia ocen wynosi: {srednia}");
+        }
+    }
+}
