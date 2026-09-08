@@ -1,0 +1,17 @@
+﻿namespace Zadanie2_R3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj liczbę: ");
+            int liczba = int.Parse(Console.ReadLine());
+
+            if (liczba % 2 == 0)
+                Console.WriteLine($"Liczba {liczba} jest parzysta.");
+            else 
+                Console.WriteLine($"Liczba {liczba} jest nieparzysta.");
+
+        }
+    }
+}
