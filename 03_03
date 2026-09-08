@@ -1,0 +1,27 @@
+namespace Zadanie3_R3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Podaj liczbę punktów uzyskanych na egzaminie: ");
+            int liczba_pkt = int.Parse(Console.ReadLine());
+
+            if (liczba_pkt < 0 || liczba_pkt > 100)
+            {
+                Console.WriteLine("Błąd: Liczba punktów musi mieścić się w przedziale od 0 do 100.");
+            }
+            else
+            {
+                if (liczba_pkt <= 100 && liczba_pkt >= 90)
+                    Console.WriteLine("Otrzymujesz ocenę bardzo dobrą");
+                else if (liczba_pkt >= 75 && liczba_pkt <= 89)
+                    Console.WriteLine("Otrzymujesz ocenę dobrą");
+                else if (liczba_pkt >= 50 && liczba_pkt <= 74)
+                    Console.WriteLine("Otrzymujesz ocenę dostateczną");
+                else
+                    Console.WriteLine("Otrzymujesz ocenę niedostateczną");
+            }
+        }
+    }
+}
