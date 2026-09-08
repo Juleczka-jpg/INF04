@@ -1,0 +1,28 @@
+Jakiego typu wartość zwraca metoda Console.ReadLine i dlaczego często wymaga konwersji? 
+
+Czym różni się instrukcja if/else if od konstrukcji switch i kiedy wygodniej zastosować switch? 
+
+Do czego służy operator % i jak za jego pomocą sprawdzić, czy liczba jest parzysta? 
+
+Dlaczego w mini–projekcie „Zgadnij liczbę" wybraliśmy pętlę do-while, a nie pętlę while? 
+
+Czym różni się działanie instrukcji break od instrukcji continue? 
+
+Zadanie 1:
+Metoda Console.ReadLine zwraca wartość tekstową typu string i wymaga konwersji, ponieważ do obliczeń na zmiennych tekstowych nie da wykonywać się działań matematycznych.
+
+Zadanie 2:
+Instrukcja if/else if sprawdza dowolne warunki logiczne i zakresy, podczas gdy konstrukcja switch porównuje jedną wartość z wieloma stałymi przypadkami.
+Wygodniej zastosować switch, gdy:
+- obsługujemy menu, 
+- jedną zmienną pod kątem różnych, stałych wartości,
+- masz więcej niż trzy lub cztery warunki sprawdzające tę samą zmienną.
+
+Zadanie 3:
+Operator "%" służy do uzyskania reszty z dzielenia, aby sprawdzić czy liczba jest parzysta należy sprawdzić czy reszta z dzielenia przed 2 jest równa 0. Jeśli tak to liczba jest parzysta, jeśli nie to nie jest parzysta.
+
+Zadanie 4:
+Pętla do-while doskonale pasuje do tego zadania, ponieważ gracz musi podać przynajmniej jedną liczbę, a warunek zakończenia, czyli trafienie liczby sekretnej, sprawdzamy dopiero po próbie. Dzięki podpowiedziom „za mało" oraz „za dużo" gra staje się logiczna, a nie czysto przypadkowa. Najlepszą strategią jest połowienie zakresu, czyli zgadywanie wartości ze środka pozostałego przedziału. 
+
+Zadanie 5:
+Instrukcja break całkowicie przerywa i kończy działanie pętli, natomiast instrukcja continue pomija tylko bieżącą iterację i przechodzi do kolejnej iteracji pętli.

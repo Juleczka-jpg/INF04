@@ -1,0 +1,15 @@
+Zadanie 1:
+= - operator przypisuje wartość.
+== - operator sprawdza czy wartości są sobie równe.
+
+Zadanie 2:
+Zwróci wynik 2, operator "%" oznacza resztę z dzielenia.
+
+Zadanie 3:
+Warunek połączony operatorem && (and) jest prawdziwy w tedy kiedy oba warunki są spełnione, a warunek połączony operatorem || (or) jest prawdziwy kiedy chociaż jeden z nich jest spełniony.
+
+Zadanie 4:
+break kończy dany przypadek i przerywa dalsze sprawdzanie wartości. Jego pominięcie powoduje błąd kompilacji w języku C#. 
+
+Zadanie 5:
+Wartość logiczną typu bool: prawda (true) lub fałsz (false). 

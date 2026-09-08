@@ -1,0 +1,32 @@
+Czym jest iteracja i czym jest pętla nieskończona? 
+
+Jaka jest podstawowa różnica między pętlą while a pętlą do-while? 
+
+Z jakich trzech części składa się nagłówek pętli for? 
+
+Czym różni się działanie instrukcji break od instrukcji continue? 
+
+Do czego najlepiej nadaje się pętla foreach? 
+
+Zadanie 1:
+Iteracja to powtarzanie tej samej operacji lub sekwencji kroków aż do osiągnięcia wyznaczonego celu lub spełnienia określonego warunku.
+Pętla nieskończona to blok kodu, który wykonuje się bez przerwy, ponieważ warunek nigdy nie staje się spełniony.  Pętla nieskończona zazwyczaj jest błędem i powoduje, że program przestaje reagować.
+
+Zadanie 2:
+Pętla while wykonuje blok kodu tak długo, jak długo spełniony jest warunek. Stosujemy ją, gdy nie wiemy z góry, ile razy pętla się wykona, ponieważ zależy to od warunku sprawdzanego w trakcie. 
+Pętla do-while różni się jednym kluczowym szczegółem: warunek sprawdzany jest na końcu, a nie na początku. Oznacza to, że blok kodu wykona się przynajmniej raz, niezależnie od warunku. 
+
+Zadanie 3:
+Przykład: for (int i = 1; i <= 5; i++) {}
+
+Nagłówek pętli for składa się z trzech części oddzielonych średnikami: 
+- Inicjalizacja int i = 1 — zmienna sterująca, której nadajemy wartość początkową. Wykonuje się tylko raz, na początku. 
+- Warunek i <= 5 — sprawdzany przed każdą iteracją. Dopóki jest prawdziwy, pętla się wykonuje. 
+- Modyfikacja i++ — wykonywana po każdej iteracji. Zapis i++ zwiększa wartość licznika o 1. 
+
+Zadanie 4:
+Instrukcja break kończy całą pętlę, natomiast continue pomija tylko bieżące powtórzenie i kontynuuje pętlę. 
+
+Zadanie 5:
+Pętla foreach służy do przeglądania wszystkich elementów zbioru danych, na przykład tablicy lub łańcucha znaków. Przechodzi ona przez każdy element po kolei, bez potrzeby ręcznego zarządzania licznikiem. 
+Pętla foreach jest czytelniejsza i bezpieczniejsza niż for, gdy chcemy po prostu odwiedzić każdy element zbioru. Nie musimy pamiętać o liczniku ani o zakresie, dzięki czemu unikamy błędów związanych z przekroczeniem granic zbioru. Łańcuch znaków również możemy przeglądać znak po znaku za pomocą foreach. 

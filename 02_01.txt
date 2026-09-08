@@ -1,0 +1,17 @@
+Zadanie 1:
+- Nazwa (identyfikator): Służy do jednoznacznego wskazania zmiennej w kodzie źródłowym i odwoływania się do niej.
+- Typ danych: Określa, jakiego rodzaju informacje mogą być przechowywane w zmiennej (np. liczby całkowite, tekst, wartości logiczne) oraz ile pamięci RAM należy na nie zarezerwować.
+- Wartość: Przedstawia konkretną informację, która w danym momencie jest zapisana w pamięci i powiązana z tą zmienną. Wartość ta może się zmieniać w trakcie działania programu.
+
+Zadanie 2:
+Deklaracja informuje program utworzeniu zmiennej o nazwie i typie. Inicjalizacja przypisuje jej pierwszą wartość. 
+
+Zadanie 3:
+Do przechowywania ceny produktu z groszami użyjemy typ double, ponieważ przechowuje on liczby zmiennoprzecinkowe.
+Do liczby uczniów użyjemy typu int, ponieważ przechowuje on liczby całkowite.
+
+Zadanie 4:
+Nie możemy bezpośrednio dodać do siebie dwóch wartości pobranych metodą Console.ReadLine, ponieważ metoda ta zawsze zwraca tekst - typ string. Jeżeli użytkownik wpisze liczbę, otrzymamy ją w postaci tekstu, a nie da się na tekście robić działań matematycznych.
+
+Zadanie 5:
+Zapis 'A' oznacza pojedynczy znak (typ char), a zapis "A" oznacza ciąg znaków (typ string).

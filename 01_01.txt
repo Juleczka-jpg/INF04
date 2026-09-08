@@ -1,0 +1,16 @@
+Zadanie 1:
+Gdy program rozpoczyna działanie, system wywołuje funkcję main, która oznacza punkt wejścia programu. Gdy uruchamiamy program, komputer odnajduje metodę Main i wykonuje zapisane w niej instrukcje od góry do dołu. 
+
+Zadanie 2:
+Console.WriteLine — wypisuje podany tekst, a następnie przechodzi do nowej linii. Kolejne polecenie zaczyna pisać już w nowym wierszu. 
+Console.Write — wypisuje tekst, ale nie przechodzi do nowej linii. Kolejny tekst pojawia się bezpośrednio za poprzednim. 
+
+Zadanie 3:
+Metoda Console.ReadLine zatrzymuje program i czeka, aż użytkownik wpisze tekst i naciśnie klawisz Enter. Metoda ReadLine zawsze zwraca tekst, czyli łańcuch znaków, nawet jeśli użytkownik wpisze liczbę.
+
+Zadanie 4:
+Kompilacja to proces tłumaczenia kodu źródłowego programu na język maszynowy, który komputer może wykonać. Jeżeli w kodzie znajduje się błąd, kompilator nie zbuduje programu i wyświetli listę błędów w oknie błędów. Każdy błąd zawiera numer linii oraz krótki opis.
+
+Zadanie 5:
+
+Znakiem średnika ";".
