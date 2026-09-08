@@ -1,0 +1,17 @@
+﻿namespace Zadanie2_R2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj imie: ");
+            string imie = Console.ReadLine();
+            Console.Write("Podaj rok urodzenia: ");
+            string rok_urodzenia = Console.ReadLine();
+
+            int wiek = 2026 - int.Parse(rok_urodzenia);
+
+            Console.WriteLine($"Cześć {imie}! Masz {wiek} lat.");
+        }
+    }
+}
