@@ -1,0 +1,45 @@
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int sekret = 42;  
+            int proba = 0;   
+            int liczba_prob = 7;
+            int podejscie = 0;
+
+            Console.WriteLine("Witaj w grze Zgadnij liczbę.");
+            Console.WriteLine("Komputer wybrał liczbę od 1 do 100.");
+
+            while(proba != sekret && podejscie < liczba_prob) 
+            {
+                if (podejscie != 0)
+                    Console.WriteLine($"Zostało Ci {liczba_prob - podejscie} prob.");
+
+                Console.Write("Podaj swoją liczbę: ");
+                proba = int.Parse(Console.ReadLine());
+                podejscie++;
+
+                if (proba < sekret)
+                    Console.WriteLine("Za mało. Spróbuj większej liczby.");
+
+                else if (proba > sekret)
+                    Console.WriteLine("Za dużo. Spróbuj mniejszej liczby.");
+
+            }
+
+            if (proba == sekret)
+            {
+                Console.WriteLine("Brawo, odgadłeś liczbę!");   
+            }
+            else
+            {
+                Console.WriteLine("Przegrałeś! Wykorzystałeś wszystkie próby.");
+                Console.WriteLine($"Sekretną liczbą była liczba {sekret}.");
+            }
+                
+            Console.ReadKey();
+        }
+    }
+}
