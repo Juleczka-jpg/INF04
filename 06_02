@@ -1,0 +1,38 @@
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] liczby = new int[6];
+            int suma = 0;
+            double srednia = 0;
+            int countsrednia = 0;
+
+            for (int i = 0; i < liczby.Length; i++)
+            {
+                Console.Write($"Podaj {i + 1}. liczbę całkowitą: ");
+                while (!int.TryParse(Console.ReadLine(), out liczby[i]))
+                {
+                    Console.Write("To nie jest poprawna liczba całkowita. Spróbuj ponownie: ");
+                }
+                suma += liczby[i];
+            }
+
+            srednia = (double)suma / liczby.Length;
+
+            for (int i = 0; i < liczby.Length; i++)
+            {
+                if (liczby[i] > srednia)
+                {
+                    countsrednia++;
+                }
+            }
+
+            Console.WriteLine($"Suma wprowadzonych liczb: {suma}");
+            Console.WriteLine($"Średnia arytmetyczna: {srednia:F2}");
+            Console.WriteLine($"Liczba elementów większych od średniej: {countsrednia}");
+
+        }
+    }
+}
