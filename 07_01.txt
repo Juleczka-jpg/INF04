@@ -1,0 +1,25 @@
+Zadanie 1:
+Aby sięgnąć po pojedynczy element, podajemy dwa indeksy: pierwszy określa wiersz, drugi kolumnę. 
+
+Zadanie 2:
+macierz.Length zwraca całkowitą liczbę elementów w tablicy, czyli iloczyn wszystkich wymiarów.
+Dla tablicy 5x6: macierz.Length zwróci 30.
+
+macierz.GetLength(1) zwraca długość konkretnego wymiaru tablicy. 
+GetLength(0) - zwraca liczbę wierszy.
+GetLength(1) - zwraca liczbę kolumn.
+Dla tablicy 5x6: macierz.GetLength(1) zwróci 6.
+
+Zadanie 3:
+Struktura n×6 z arkuszy INF.04 przechowuje zestawy po sześć liczb; każdy wiersz to jeden zestaw. 
+
+Zadanie 4:
+- Gdy rozmiar kolekcji jest nieznany lub dynamicznie się zmienia 
+Gdy użytkownik wprowadza nieznaną z góry liczbę elementów, List<T> pozwala na łatwe dodawanie kolejnych wartości bez martwienia się o rozmiar.
+
+- Gdy często dodajemy lub usuwamy elementy 
+Gdy chcesz usunąć element z dowolnego miejsca w kolekcji, List<T> robi to automatycznie, podczas gdy w tablicy musisz napisać dodatkowy kod.
+
+Zadanie 5:
+Do odczytania liczby elementów w List<T> używamy właściwości Count.
+Rozmiar Count jest dynamiczny, a Lenght jest stały.
