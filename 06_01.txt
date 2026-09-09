@@ -1,7 +1,3 @@
-
-
-Dlaczego przy wyznaczaniu maksimum wartość początkową ustawiamy na pierwszy element tablicy, a nie na zero? 
-
 Zadanie 1:
 Pierwszy indeks wynosi 0 a ostatni 7.
 
