@@ -1,0 +1,18 @@
+
+
+Dlaczego przy wyznaczaniu maksimum wartość początkową ustawiamy na pierwszy element tablicy, a nie na zero? 
+
+Zadanie 1:
+Pierwszy indeks wynosi 0 a ostatni 7.
+
+Zadanie 2:
+int[] t = new int[5]; deklaruje tablicę o 5 elementach, int[] t = { 1, 2, 3, 4, 5 }; natomiast tworzy i wypełnia tablicę z 5 wartościami.
+
+Zadanie 3:
+Ponieważ tablica indeksowana jest od 0. Ostatni element tablicy znajduje się pod indeksem t.Length - 1.
+
+Zadanie 4:
+Właściwość Length służy do określania długości tablicy. Zwraca wartość typu int.
+
+Zadanie 5:
+Na początek trzeba przyjąć wartość pierwszego elementu, a nie zero, ponieważ gdybyśmy szukali maksimum, zaczynając od zera, a wszystkie liczby byłyby ujemne, otrzymalibyśmy błędny wynik. 
