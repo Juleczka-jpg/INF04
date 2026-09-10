@@ -1,0 +1,37 @@
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> liczby = new List<int>();
+
+            while (true)
+            {
+                Console.Write("Podaj liczbę: ");
+                int liczba;
+                while (!int.TryParse(Console.ReadLine(), out liczba))
+                {
+                    Console.Write("To nie jest poprawna liczba całkowita. Spróbuj ponownie: ");  
+                }
+
+                if (liczba == 0)
+                    break;
+
+                liczby.Add(liczba);
+            }
+
+            liczby.RemoveAll(x => x < 0);
+
+            Console.WriteLine("\n3. Elementy bez liczb ujemnych:");
+            int suma = 0;
+            for (int i = 0; i < liczby.Count; i++)
+            {
+                suma += liczby[i];
+                Console.WriteLine($"Liczba {i + 1}: {liczby[i]}");
+            }
+
+            Console.WriteLine($"\n4. Suma pozostałych liczb: {suma}");
+        }
+    }
+}
