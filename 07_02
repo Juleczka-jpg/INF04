@@ -1,0 +1,52 @@
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("1. Wprowadź liczbę wierszy (n): ");
+            int n;
+            while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
+            {
+                Console.Write("To nie jest poprawna liczba całkowita. Spróbuj ponownie: ");
+            }
+
+            int[,] macierz = new int[n, 6];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine($"\n2.{i + 1} Wprowadź 6 liczb dla wiersza {i + 1}:");
+                for (int j = 0; j < 6; j++)
+                {
+                    Console.Write($"Podaj liczbę {j + 1}: ");
+                    while (!int.TryParse(Console.ReadLine(), out macierz[i, j]))
+                    {
+                        Console.Write("To nie jest poprawna liczba całkowita. Spróbuj ponownie: ");
+                    }
+                }
+            }
+
+            Console.WriteLine("\n3. Wygenerowana macierz:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("| ");
+                for (int j = 0; j < 6; j++)
+                {
+                    Console.Write($"{macierz[i, j],6} ");
+                }
+                Console.WriteLine("|");
+            }
+
+            Console.WriteLine("\n4. Suma każdego wiersza:");
+            for (int i = 0; i < n; i++)
+            {
+                double suma = 0;
+                for (int j = 0; j < 6; j++)
+                {
+                    suma += macierz[i, j];
+                }
+                Console.WriteLine($"Suma wiersza {i + 1}: {suma}");
+            }
+        }
+    }
+}
