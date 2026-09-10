@@ -1,0 +1,25 @@
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Random generator = new Random();
+            int[] zestaw = new int[20];
+            int[] licznik = new int[6];
+
+            for (int i = 0; i < zestaw.Length; i++)
+            {
+                int wynik = generator.Next(1, 7);
+                licznik[wynik - 1]++;
+                Console.WriteLine($"Rzut {i + 1}: {wynik}");
+            }
+      
+            Console.WriteLine("\nWyniki:");
+            for (int i = 0; i < licznik.Length; i++)
+            {
+                Console.WriteLine($"{i + 1} oczek: {licznik[i]} razy");
+            }
+        }
+    }
+}
