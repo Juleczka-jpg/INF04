@@ -1,0 +1,16 @@
+Zadanie 1:
+Komputer nie potrafi wytworzyć liczb prawdziwie losowych, ponieważ działa według ściśle określonych reguł. Zamiast tego generuje liczby pseudolosowe, czyli takie, które sprawiają wrażenie przypadkowych, choć powstają na podstawie obliczeń.
+
+Zadanie 2:
+Zwraca zakres wartości od 1 do 49, ponieważ dolna granica jest włączona, a górna wyłączna.
+
+Zadanie 3:
+Generator nie pamięta, co wylosował wcześniej, więc może zwrócić tę samą wartość kilka razy.
+
+Zadanie 4:
+W losowaniu z powtórzeniami ta sama liczba może zostać wylosowana wielokrotnie. Oznacza to, że w wyniku mogą pojawić się duplikaty.
+
+W losowaniu bez powtórzeń każda liczba może zostać wylosowana tylko raz. Oznacza to, że wynik składa się z unikalnych liczb.
+
+Zadanie 5:
+Służy jako pomocnicza tablica wartości logicznych, w której każdy indeks odpowiada jednej możliwej liczbie. Gdy liczba zostaje wylosowana, oznaczamy odpowiadający jej indeks jako zajęty. Przed dodaniem sprawdzamy znacznik, co jest szybsze niż przeglądanie całego zestawu. 
