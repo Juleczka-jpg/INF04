@@ -1,0 +1,25 @@
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static int Najwiekszy(int[] liczby)
+        {
+            int max = liczby[0];
+            for (int i = 1; i < liczby.Length; i++)
+            {
+                if (liczby[i] > max)
+                {
+                    max = liczby[i];
+                }
+            }
+            return max;
+        }
+        static void Main(string[] args)
+        {
+            int[] zestaw = { 5, 12, 7, 23, 1, 9, 18 };
+            int najwiekszyElement = Najwiekszy(zestaw);
+            Console.WriteLine($"Największy element w tablicy to: {najwiekszyElement}");
+        }
+
+    }
+}
