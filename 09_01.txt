@@ -1,0 +1,21 @@
+Zadanie 1:
+Parametr jest to zmienna zadeklarowana w sygnaturze metody. Służy jako placeholder, która zostanie przekazany do metody podczas jej wywołania.
+Argument jest to rzeczywista wartość przekazywana do metody podczas jej wywołania. Argument odpowiada parametrowi zdefiniowanemu w metodzie.
+
+Zadanie 2:
+Metoda zadeklarowana jako void wykonuje pewne czynności, ale nie przekazuje wyniku z powrotem do kodu, który ją wywołał.
+Stosujemy void, gdy:
+- Metoda wykonuje pewne działania, ale nie musi zwracać wyniku.
+- Chcemy tylko wywołać efekt uboczny.
+- Metoda służy do inicjalizacji, konfiguracji lub wykonywania operacji, które nie wymagają zwracania wyniku.
+
+Zadanie 3:
+1. Przekazuje wynik z metody do kodu wywołującego. np. return a + b;
+2. Zakańcza wykonanie metody, szczególnie w metodach void. np. return;
+
+Zadanie 4:
+Tablice są przekazywane przez referencję, co oznacza, że metoda otrzymuje kopię referencji do oryginalnej tablicy, a nie kopię samej tablicy. Dlatego modyfikacje wprowadzone w metodzie dotyczą oryginalnej tablicy, a nie jej kopii.
+
+Zadanie 5:
+Arkusz INF.04 zaleca przekazywanie danych przez parametry zamiast korzystania ze zmiennych globalnych z kilku powodów: czytelność, bezpieczeństwo, elastyczność i utrzymanie kodu.
+Zmienna globalna to zmienna zadeklarowana poza wszystkimi metodami, do której każda metoda ma swobodny dostęp. Problem polega na tym, że gdy wiele metod może ją zmieniać, trudno przewidzieć, kto i kiedy nadał jej daną wartość. Taki kod staje się podatny na błędy i trudny do analizy. 
