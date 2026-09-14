@@ -1,0 +1,38 @@
+Zadanie 1:
+Klasa to opis, czyli wzorzec, według którego tworzymy obiekty. Jest jak pusty formularz.
+Analogia: Klasa "Samochód" definiuje, jakie cechy ma samochód np. marka, model, kolor, rok produkcji oraz co może robić np. jechać, zatrzymać się, zatrąbić.
+Obiekt to konkretny egzemplarz utworzony na podstawie klasy. To wypełniony formularz.
+Analogia: Obiekt "mój samochód" zawiera konkretne dane: "Marka: Toyota, Model: Corolla, Kolor: niebieski, Rok produkcji: 2022". To już rzeczywisty samochód, który możemy wprowadzić.
+
+Zadanie 2:
+______________________________________________________________________
+       Pole:               |      Właściwości
+___________________________|__________________________________________
+ To zmienna przechowująca  | To metoda lub para metod (get/set), 
+ dane wewnątrz klasy.      | która kontroluje dostęp do pola.
+___________________________|__________________________________________
+ Przykład:                 | Przykład: 
+ public string Nazwisko;   | public string Nazwisko { get; set; }
+___________________________|__________________________________________
+ Może być publiczne.       | Pozwala na kontrolę dostępu. 
+                           | 
+___________________________|__________________________________________
+ Nie można dodać logiki    | Można dodać logikę przy odczycie 
+ przy odczycie/zapisie.    | (get) lub zapisie (set).
+___________________________|__________________________________________
+
+Dlaczego właściwości są bezpieczniejsze niż publiczne pola:
+- Pola publiczne naruszają zasadę ukrywania danych. Właściwości pozwalają kontrolować dostęp do danych. 
+- Walidacja danych
+- Logowanie i debugowanie
+- Elastyczność
+
+Zadanie 3:
+Dwie kluczowe cechy szczególne konstruktora, które odróżniają go od zwykłej metody:
+- Automatyczne wywoływanie podczas tworzenia obiektu
+- Konstruktor nie ma typu zwracanego — ani void, ani żadnego innego typ.
+
+Zadanie 4:
+Słowo kluczowe "this" odnosi się do aktualnego obiektu, który jest tworzony. Jest opcjonalny, kiedy nazwy parametrów konstruktora nie kolidują z nazwami pól klasy, "this" nie jest konieczne.
+Jest niezbędny, kiedy parametr konstruktora ma taką samą nazwę jak pole klasy lub przy wywoływaniu innego konstruktora tej samej klasy.
+
