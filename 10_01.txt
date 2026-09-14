@@ -1,0 +1,23 @@
+Zadanie 1:
+1. Właściwość (Length):
+- Jest to pole lub właściwość obiektu, które przechowuje wartość.
+- Nie wymaga nawiasów okrągłych () ani argumentów.
+- Zwraca wartość bezpośrednio
+
+2. Metoda (ToUpper):
+- Jest to funkcja, która wykonuje określone działanie.
+- Wymaga nawiasów okrągłych (), nawet jeśli nie przyjmuje argumentów.
+- Może przyjmować argumenty i zwracać wynik po wykonaniu operacji.
+
+Zadanie 2:
+Metoda Split dzieli łańcuch znaków na części według podanego znaku rozdzielającego, zwanego separatorem. Wynikiem jest tablica łańcuchów, którą możemy następnie przeglądać. Separator to znak lub ciąg znaków, który określa, gdzie tekst ma zostać podzielony np. pojedynczy znak(','), wiele znaków(' - '), białe znaki.
+
+Zadanie 3:
+Metoda int.Parse zgłasza błąd wykonania, gdy tekst nie jest liczbą. Wpisanie słowa zamiast cyfr powoduje awarię całego programu. 
+Metoda int.TryParse próbuje przekonwertować tekst na liczbę i informuje, czy się to udało. W odróżnieniu od int.Parse nie zgłasza błędu, lecz zwraca wartość logiczną true lub false. Wynik konwersji trafia do zmiennej podanej po słowie kluczowym out. 
+
+Zadanie 4:
+Metody te są szczególnie przydatne przy porównywaniu tekstu wpisanego przez użytkownika. Jeżeli oczekujemy odpowiedzi „tak", użytkownik może wpisać „Tak", „TAK" lub „tak". Sprowadzając jego odpowiedź do małych liter, porównujemy ją z jednym wzorcem, niezależnie od wielkości liter. 
+
+Zadanie 5:
+Komunikat błędu powinien być konkretny i pomocny. Zamiast ogólnikowego „błędne dane" wyjaśniamy, czego oczekujemy oraz podajemy przykład poprawnej wartości.
