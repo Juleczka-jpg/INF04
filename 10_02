@@ -1,0 +1,14 @@
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Podaj zdanie: ");
+            string zdanie = Console.ReadLine();
+            string[] slowa = zdanie.Split(' ');
+            Console.WriteLine($"Liczba słów: {slowa.Length}");
+            Console.WriteLine($"Zdanie wielkimi literami: {zdanie.ToUpper()}");
+        }
+    }
+}
