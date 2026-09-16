@@ -1,0 +1,43 @@
+namespace ConsoleApp2
+{
+    class Zwierze
+    {
+        public string imie;
+
+        public virtual void WydajDzwiek()
+        {
+            Console.WriteLine("Zwierzę wydaje dżwięk");
+        }
+    }
+
+    class Pies: Zwierze
+    {
+        public override void WydajDzwiek()
+        {
+            Console.WriteLine("Hau hau");
+        }
+    }
+
+    class Kot : Zwierze
+    {
+        public override void WydajDzwiek()
+        {
+            Console.WriteLine("Miau");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Zwierze zwierze = new Zwierze();
+            zwierze.WydajDzwiek();
+
+            Pies pies = new Pies();
+            pies.WydajDzwiek();   
+            
+            Kot kot = new Kot();
+            kot.WydajDzwiek();
+        }
+    }
+}
