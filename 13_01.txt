@@ -1,0 +1,21 @@
+Zadanie 1:
+Wyjątek to sygnał o nieprawidłowej sytuacji, która pojawia się w trakcie działania programu i uniemożliwia poprawne wykonanie instrukcji. Gdy taka sytuacja wystąpi, mówimy, że program zgłasza wyjątek. 
+
+Zadanie 2:
+Czasem pewne czynności powinny zostać wykonane bez względu na to, czy wystąpił wyjątek, czy nie. Blok try zawiera instrukcje, które mogą zgłosić wyjątek, a następnie ewentualnie pasujący blok catch, a na końcu zawsze blok finally. Blok finally wykona się nawet wtedy, gdy w bloku try wszystko przebiegło bez błędów. 
+
+Zadanie 3:
+int.Parse to szybka konwersja, ale zgłasza wyjątek, jeśli się nie powiedzie. Używa się tylko, gdy jesteśmy pewni, że tekst jest poprawną liczbą.
+int.TryParse to bezpieczna konwersja, zwraca true/false i nie zgłasza wyjątków. Używaj, gdy dane mogą być niepewne.
+
+int.TryParse jest korzystniejszy kiedy:
+- konwertujemy dane wprowadzone przez użytkownika, żeby uniknąć awarii programu z powodu niepoprawnych danych.
+- spodziewamy się, że konwersja może się nie powieść to używamy TryParse. Unika ona obsługę wyjątków, które są kosztowne dla wydajności.
+- kod z TryParse jest często bardziej czytelny i łatwiejszy do utrzymania, ponieważ nie wymaga stosowania try-catch.
+
+Zadanie 4:
+FormatException — pojawia się przy nieudanej konwersji tekstu na liczbę, na przykład int.Parse("abc"). 
+OverflowException — pojawia się, gdy liczba jest poprawna, ale zbyt duża dla danego typu, na przykład wartość przekraczająca zakres typu int. 
+
+
+
