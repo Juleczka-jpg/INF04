@@ -1,0 +1,88 @@
+namespace ConsoleApp2
+{
+    class Ksiazka
+    {
+        private string tytul;
+        private string autor;
+        private int liczbaStron;
+
+        public string Tytul
+        {
+            get { return tytul; }
+
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                    tytul = value;
+                else
+                    tytul = "Nieznany";
+            }
+        }
+
+        public string Autor
+        {
+            get { return autor; }
+
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                    autor = value;
+                else
+                    autor = "Nieznany";
+            }
+        }
+
+        public int LiczbaStron
+        {
+            get { return liczbaStron; }
+
+            set
+            {
+                if (value >= 1)
+                    liczbaStron = value;
+
+                else
+                    liczbaStron = 1;         
+            }
+        }
+
+        public Ksiazka(string tytul, string autor, int liczbaStron)
+        {
+            Tytul = tytul;
+            Autor = autor;
+            LiczbaStron = liczbaStron;
+        }
+
+        public void Opisz()
+        {
+            Console.WriteLine("Dane książki:");
+            Console.WriteLine($"Tytuł: {tytul} \nAutor: {autor} \nLiczba stron: {liczbaStron}");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\n Książka 1");
+            Ksiazka ksiazka1 = new Ksiazka("", "", 0);
+            ksiazka1.Opisz();
+
+            Console.WriteLine("\n Książka 2");
+            Ksiazka ksiazka2 = new Ksiazka("a", "b", 30);
+            ksiazka2.Opisz();
+
+            Console.WriteLine("\n Książka 3");
+            Ksiazka ksiazka3 = new Ksiazka("a", "", 0);
+            ksiazka3.Opisz();
+
+            Console.WriteLine("\n Książka 4");
+            Ksiazka ksiazka4 = new Ksiazka("", "b", 0);
+            ksiazka4.Opisz();
+
+            Console.WriteLine("\n Książka 5");
+            Ksiazka ksiazka5 = new Ksiazka("", "", 300);
+            ksiazka5.Opisz();
+        }
+    }
+}
