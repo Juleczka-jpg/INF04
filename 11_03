@@ -1,0 +1,85 @@
+namespace ConsoleApp2
+{
+    class KontoBankowe
+    {
+        public double Saldo { get; private set; }
+        
+
+        public KontoBankowe(double saldoPoczatkowe)
+        {
+            if (saldoPoczatkowe >= 0)
+            {
+                Saldo = saldoPoczatkowe;
+            }
+            else
+            {
+                Saldo = 0;
+                Console.WriteLine("Saldo początkowe nie może być ujemne. Ustawiono 0.");
+            }
+        }
+
+        public KontoBankowe()
+        {
+            Saldo = 0;
+        }
+
+        public void Wplac(double kwota)
+        {
+            if (kwota > 0)
+            {
+                Saldo += kwota;
+                Console.WriteLine($"Wpłacono: {kwota} Obecne saldo: {Saldo}");
+            }
+            else
+            {
+                Console.WriteLine($"Nie można wpłacić kwoty ujemnej lub równej zero.");
+            }       
+        }
+
+        public void Wyplac(double kwota)
+        {
+            if (kwota > 0)
+            {
+                if (Saldo >= kwota)
+                {
+                    Saldo -= kwota;
+                    Console.WriteLine($"Wypłacono: {kwota}. Obecne saldo: {Saldo}");
+                }
+                else
+                {
+                    Console.WriteLine("Nie można wypłacić kwoty większej niż saldo.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nie można wypłacić kwoty ujemnej lub równej zero.");
+            }
+        }
+        public void PokazSaldo()
+        {
+            Console.WriteLine($"Aktualne saldo: {Saldo}");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\nKonto bankowe 1 (saldo początkowe: 500):");
+            KontoBankowe konto1 = new KontoBankowe(500);
+            konto1.Wplac(200);
+            konto1.Wyplac(100);
+            konto1.PokazSaldo();
+            konto1.Wplac(-50);
+            konto1.Wyplac(1000);
+
+            Console.WriteLine("\nKonto bankowe 2 (saldo początkowe: 0):");
+            KontoBankowe konto2 = new KontoBankowe();
+            konto2.Wplac(100);
+            konto2.Wyplac(50);
+            konto2.PokazSaldo();
+            konto2.Wyplac(60);
+            konto2.Wplac(-10);
+        }
+    }
+}
