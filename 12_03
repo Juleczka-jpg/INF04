@@ -1,0 +1,54 @@
+namespace ConsoleApp2
+{
+    abstract class Pracownik
+    {
+        public string imie;
+
+        public abstract double ObliczWynagrodzenie();
+    }
+
+    class PracownikEtatowy : Pracownik
+    {
+        public int pensjaMiesieczna;
+        public override double ObliczWynagrodzenie()
+        {
+            return pensjaMiesieczna;
+        }
+    }
+
+    class Zleceniobiorca : Pracownik
+    {
+        public int stawkaGodzinowa;
+        public int liczbaGodzin;
+
+        public override double ObliczWynagrodzenie()
+        {
+            return stawkaGodzinowa * liczbaGodzin;
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Pracownik> pracownicy = new List<Pracownik>
+            {
+                new PracownikEtatowy { imie = "Jan Kowalski", pensjaMiesieczna = 5000 },
+                new Zleceniobiorca { imie = "Anna Nowak", stawkaGodzinowa = 30, liczbaGodzin = 120 },
+                new PracownikEtatowy { imie = "Piotr Wiśniewski", pensjaMiesieczna = 6000 },
+                new Zleceniobiorca { imie = "Maria Zielińska", stawkaGodzinowa = 40, liczbaGodzin = 100 }
+            };
+
+            double lacznaSuma = 0;
+
+            foreach (var pracownik in pracownicy)
+            {
+                double wynagrodzenie = pracownik.ObliczWynagrodzenie();
+                Console.WriteLine($"Imię: {pracownik.imie}, Wynagrodzenie: {wynagrodzenie}");
+                lacznaSuma += wynagrodzenie;
+            }
+
+            Console.WriteLine($"\nŁączna suma wynagrodzeń: {lacznaSuma}");
+        }
+    }
+}
