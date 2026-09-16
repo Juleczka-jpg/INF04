@@ -1,0 +1,29 @@
+namespace ConsoleApp2
+{
+    
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                Console.Write("Podaj pierwszą liczbę całkowitą: ");
+                int liczba1 = int.Parse(Console.ReadLine());
+
+                Console.Write("Podaj drugą liczbę całkowitą: ");
+                int liczba2 = int.Parse(Console.ReadLine());
+
+                double wynik = (double)liczba1 / liczba2;
+                Console.WriteLine($"Wynik dzielenia: {wynik}");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Błąd: Wprowadzono nieprawidłową liczbę. Upewnij się, że podajesz tylko cyfry.");
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Błąd: Próba dzielenia przez zero. Druga liczba nie może być zerem.");
+            }
+        }
+    }
+}
