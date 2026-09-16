@@ -1,0 +1,14 @@
+Zadanie 1:
+Klasa bazowa to szablon ogólny samochodu, a klasa pochodna to konkretny model tego samochodu.
+Klasa bazowa to ogólna definicja, która opisuje wspólne cechy i zachowania dla wszystkich samochodów.
+Klasa pochodna to specjalizacja klasy bazowej, która dziedziczy jej cechy, ale dodaje lub modyfikuje niektóre z nich.
+
+Zadanie 2:
+W klasie bazowej metodę przeznaczoną do nadpisania oznaczamy słowem "virtual", czyli wirtualną. W klasie pochodnej dostarczamy jej nową wersję, oznaczoną słowem "override", czyli nadpisującą.
+Gdybyśmy nie napisali słowa override, kompilator zgłosiłby ostrzeżenie, a metoda bazowa mogłaby zostać użyta wbrew naszym intencjom. 
+
+Zadanie 3:
+Klasa abstrakcyjna to klasa, której nie można utworzyć operatorem new. Służy wyłącznie jako wzorzec dla klas pochodnych. Może zawierać metody abstrakcyjne, czyli takie, które nie mają treści, a jedynie deklarację. Każda klasa pochodna jest wówczas zobowiązana taką metodę nadpisać. 
+
+Zadanie 4:
+Klasa może dziedziczyć tylko po jednej klasie bazowej. Czasem jednak chcemy, aby różne, niespokrewnione klasy gwarantowały, że potrafią wykonać określone zadanie. Interfejs to zestaw deklaracji metod i właściwości, których klasa zobowiązuje się zrealizować. 
