@@ -1,0 +1,14 @@
+Zadanie 1:
+Pamięć operacyjna komputera RAM jest ulotna, co oznacza, że przechowuje dane tylko w czasie działania programu. Dysk twardy przechowuje dane trwale, dlatego informacje zapisane do pliku pozostają na nim nawet po wyłączeniu komputera. 
+
+Zadanie 2:
+Najprostszy sposób zapisania danych do pliku oferuje metoda File.WriteAllText. Przyjmuje ona dwa argumenty: nazwę pliku oraz tekst, który ma zostać zapisany. 
+Metoda File.WriteAllText nadpisuje plik, co bywa kłopotliwe, gdy chcemy zachować poprzednie dane i jedynie dołożyć nowe. Do dopisywania na końcu pliku służy metoda File.AppendAllText, która działa podobnie, lecz nie kasuje dotychczasowej zawartości. 
+Różnica jest istotna: nadpisanie usuwa stare dane, natomiast dopisanie zachowuje je i dokłada nowe na końcu. Dopisywanie przydaje się wszędzie tam, gdzie prowadzimy historię zdarzeń, na przykład dziennik kolejnych losowań. 
+
+Zadanie 3:
+Konstrukcja using z StreamWriter automatycznie zamyka i zwalnia zasoby po zakończeniu bloku, nawet jeśli wystąpi błąd. Jest zalecana, aby unikać wycieków zasobów, problemów z dostępem do plików i utraty danych. Bez using musimy ręcznie wywoływać Close() lub Dispose(), co jest mniej bezpieczne i bardziej podatne na błędy.
+
+Zadanie 4:
+Próba odczytu pliku, który nie istnieje, kończy się wyjątkiem FileNotFoundException i przerwaniem programu. Zanim sięgniemy po dane, warto więc sprawdzić, czy plik w ogóle jest dostępny. Służy do tego metoda File.Exists, która zwraca wartość logiczną. 
+Metoda zwraca true, gdy plik o podanej nazwie istnieje, oraz false w przeciwnym razie. Dzięki temu możemy zawczasu zareagować na brak pliku i wyświetlić zrozumiały komunikat zamiast pozwolić, by program się zawiesił. 
