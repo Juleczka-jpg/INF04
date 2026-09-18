@@ -1,0 +1,95 @@
+using System;
+using System.IO;
+using System.Linq;
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        private const string NazwaPliku = "losowe.txt";
+
+        static void Main(string[] args)
+        {
+            ZapiszLosoweLiczby(NazwaPliku);
+
+            Console.WriteLine();
+
+            OdczytajIPrzetworzLiczby(NazwaPliku);
+
+            Console.WriteLine("\nNaciśnij dowolny klawisz, aby zakończyć...");
+            Console.ReadKey();
+        }
+
+        static void ZapiszLosoweLiczby(string sciezkaPliku)
+        {
+            Random rnd = new Random();
+
+            using (StreamWriter pisarz = new StreamWriter(sciezkaPliku))
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    int liczba = rnd.Next(1, 101);
+                    pisarz.WriteLine(liczba);
+                }
+            }
+            Console.WriteLine($"Wylosowano i zapisano 10 liczb do pliku '{sciezkaPliku}'.");
+        }
+
+        static void OdczytajIPrzetworzLiczby(string sciezkaPliku)
+        { 
+            if (!File.Exists(sciezkaPliku))
+            {
+                Console.WriteLine($"Błąd: Plik '{sciezkaPliku}' nie istnieje.");
+                return;
+            }
+
+            try
+            {
+                int suma = 0;
+                int min = int.MaxValue;
+                int max = int.MinValue;
+                int licznik = 0;
+
+                Console.WriteLine("Odczytane liczby z pliku:");
+
+                using (StreamReader czytnik = new StreamReader(sciezkaPliku))
+                {
+                    string linia;
+                    while ((linia = czytnik.ReadLine()) != null)
+                    {
+                        if (int.TryParse(linia, out int liczba))
+                        {
+                            Console.WriteLine($"- {liczba}");
+                            suma += liczba;
+
+                            if (liczba < min) min = liczba;
+                            if (liczba > max) max = liczba;
+
+                            licznik++;
+                        }
+                    }
+                }
+
+                if (licznik > 0)
+                {
+                    Console.WriteLine("\n--- STATYSTYKI ---");
+                    Console.WriteLine($"Suma wszystkich liczb: {suma}");
+                    Console.WriteLine($"Wartość najmniejsza (Min): {min}");
+                    Console.WriteLine($"Wartość największa (Max): {max}");
+                }
+                else
+                {
+                    Console.WriteLine("Plik był pusty lub nie zawierał poprawnych liczb.");
+                }
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine($"Wystąpił błąd wejścia/wyjścia podczas odczytu pliku: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Wystąpił nieoczekiwany błąd: {ex.Message}");
+            }
+        }
+    }
+}
