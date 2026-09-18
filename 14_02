@@ -1,0 +1,44 @@
+using System.IO;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+      
+        static void Main(string[] args)
+        {
+            string tresc;
+
+            Console.WriteLine("Wpisz kolejne zadania do wykonania. Aby zakończyć, wpisz 'koniec'.");
+            while (true)
+            {
+                tresc = Console.ReadLine();
+
+                if (tresc.ToLower() == "koniec")
+                {
+                    break;
+                }
+
+                File.AppendAllText("lista_zadan.txt" + Environment.NewLine);
+            }
+
+            if (File.Exists("lista_zadan.txt"))
+            {
+                string[] tasks = File.ReadAllLines("lista_zadan.txt");
+                Console.WriteLine("\nLista zadań:");
+                for (int i = 0; i < tasks.Length; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {tasks[i]}");
+                }
+                Console.WriteLine($"\nLiczba zadań: {tasks.Length}");
+            }
+            else
+            {
+                Console.WriteLine("Plik z zadaniami nie istnieje.");
+            }
+
+            Console.WriteLine("\nNaciśnij dowolny klawisz, aby zakończyć...");
+            Console.ReadKey();
+        }
+    }
+}
