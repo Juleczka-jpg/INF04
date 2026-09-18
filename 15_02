@@ -1,0 +1,47 @@
+using System;
+
+namespace NajmniejszyElementTablicy
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Analizowanie tablicy");
+
+            int[] liczby = { 12, 7, 25, 3, 18 };
+            int wartoscMinimalna = ZnajdzMinimum(liczby);
+
+            Console.WriteLine($"Najmniejsza wartość w tablicy to: {wartoscMinimalna}");
+        }
+
+        /*
+        nazwa funkcji:      ZnajdzMinimum
+        opis:               Funkcja przeszukuje tablicę liczb całkowitych 
+                            i znajduje w niej najmniejszą wartość.
+        opis parametrów:    int[] tablica - jednowymiarowa tablica liczb całkowitych, 
+                            w której szukana jest wartość minimalna.
+        zwracana wartość:   int minimum - liczba całkowita reprezentująca najmniejszy element 
+                            znaleziony w tablicy.
+        autor:              zdajacy nr 1
+        */
+        static int ZnajdzMinimum(int[] tablica)
+        {
+            if (tablica == null || tablica.Length == 0)
+            {
+                throw new ArgumentException("Tablica nie może być pusta.");
+            }
+
+            int minimum = tablica[0];
+
+            for (int i = 1; i < tablica.Length; i++)
+            {
+                if (tablica[i] < minimum)
+                {
+                    minimum = tablica[i];
+                }
+            }
+
+            return minimum;
+        }
+    }
+}
