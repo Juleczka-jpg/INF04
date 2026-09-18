@@ -1,15 +1,15 @@
 using System.IO;
 
-namespace ConsoleApp2
+namespace ConsoleApp6
 {
     internal class Program
     {
-      
+
         static void Main(string[] args)
         {
             string tresc;
-
             Console.WriteLine("Wpisz kolejne zadania do wykonania. Aby zakończyć, wpisz 'koniec'.");
+           
             while (true)
             {
                 tresc = Console.ReadLine();
@@ -19,18 +19,19 @@ namespace ConsoleApp2
                     break;
                 }
 
-                File.AppendAllText("lista_zadan.txt" + Environment.NewLine);
+                File.AppendAllText("lista_zadan.txt", tresc + Environment.NewLine);
             }
 
             if (File.Exists("lista_zadan.txt"))
             {
-                string[] tasks = File.ReadAllLines("lista_zadan.txt");
+                string[] zadania = File.ReadAllLines("lista_zadan.txt");
                 Console.WriteLine("\nLista zadań:");
-                for (int i = 0; i < tasks.Length; i++)
+
+                for (int i = 0; i < zadania.Length; i++)
                 {
-                    Console.WriteLine($"{i + 1}. {tasks[i]}");
+                    Console.WriteLine($"{i + 1}. {zadania[i]}");
                 }
-                Console.WriteLine($"\nLiczba zadań: {tasks.Length}");
+                Console.WriteLine($"\nLiczba zadań: {zadania.Length}");
             }
             else
             {
