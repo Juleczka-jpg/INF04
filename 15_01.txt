@@ -1,0 +1,19 @@
+Zadanie 1:
+Wszystkie elementy, które powinien zawierać nagłówek dokumentacyjny funkcji według wzoru z arkusza INF.04:
+- nazwa funkcji — dokładna nazwa opisywanej funkcji, 
+- opis — krótkie wyjaśnienie, co funkcja robi, 
+- opis parametrów — wymienienie każdego parametru wraz z jego znaczeniem, 
+- zwracana wartość — informacja, co funkcja zwraca, lub adnotacja, że nic nie zwraca, 
+- autor — numer zdającego, identyfikujący osobę rozwiązującą zadanie. 
+
+Zadanie 2:
+Nazwa zmiennej, funkcji czy parametru powinna jasno mówić, do czego dany element służy, bez potrzeby zaglądania w głąb kodu.  
+Nazwy jednoliterowe, takie jak a, x czy tab, nie niosą żadnej informacji i zmuszają czytelnika do domysłów. Nazwy opisowe, jak sumaOcen, liczbaUczniow czy wczytajWiek, od razu zdradzają swoje przeznaczenie. Wyjątkiem pozostaje jedynie licznik pętli, gdzie krótkie i jest powszechnie akceptowane. 
+
+Zadanie 3:
+Długa metoda Main, która robi wszystko naraz, jest trudna do zrozumienia i poprawienia. 
+Funkcja powinna realizować jedną, jasno określoną czynność, na przykład wczytanie danych, obliczenie wyniku albo wyświetlenie raportu. Taki podział nazywamy zasadą pojedynczej odpowiedzialności. Dzięki niemu metoda Main staje się czytelnym planem działania, a szczegóły kryją się w osobnych funkcjach. 
+
+Zadania 4:
+Aplikacja konsolowa nie ma graficznego interfejsu, więc jedynym sposobem porozumienia są komunikaty tekstowe wyświetlane na ekranie. 
+Każda prośba o dane powinna jasno mówić, czego program oczekuje, a każdy wynik powinien być opisany, a nie wyświetlony jako goła liczba. Użytkownik nie zna kodu, więc to komunikaty prowadzą go przez działanie programu. Brak komunikatów sprawia, że program wydaje się zepsuty, nawet jeśli działa poprawnie. 
