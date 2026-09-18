@@ -1,0 +1,122 @@
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Analiza wyników testu");
+
+            int liczbaUczniow = WczytajLiczbeUczniow();
+
+            int[] wyniki = WczytajWynikiUczniow(liczbaUczniow);
+
+            double srednia = ObliczSrednia(wyniki);
+            int liczbaZaliczonych = PoliczZaliczone(wyniki);
+
+            Console.WriteLine($"Średni wynik klasy: {srednia:F2} pkt.");
+            Console.WriteLine($"Liczba uczniów, którzy zaliczyli test (>= 50 pkt): {liczbaZaliczonych}");
+        }
+
+        /*
+        *************************************************************************
+        nazwa funkcji:      WczytajLiczbeUczniow
+        opis:               Funkcja pobiera od użytkownika liczbę uczniów w klasie. 
+                            Pętla wymusza podanie poprawnej liczby całkowitej większej od 0.
+        opis parametrów:    brak parametrów.
+        zwracana wartość:   int liczba - liczba całkowita reprezentująca poprawnie wprowadzoną 
+                            liczbę uczniów.
+        autor:              zdajacy nr 1
+        *************************************************************************
+        */
+        static int WczytajLiczbeUczniow()
+        {
+            int liczba;
+            while (true)
+            {
+                Console.Write("Podaj liczbę uczniów w klasie (większą od 0): ");
+                if (int.TryParse(Console.ReadLine(), out liczba) && liczba > 0)
+                {
+                    return liczba;
+                }
+                Console.WriteLine("Błąd! Wprowadź poprawną liczbę całkowitą większą od 0.");
+            }
+        }
+
+        /*    
+        opis:               Funkcja tworzy tablicę wyników i uzupełnia ją wartościami 
+                            pobranymi od użytkownika z zakresu od 0 do 100 punktów.
+        opis parametrów:    int liczbaUczniow - liczba całkowita określająca rozmiar 
+                            tworzonej tablicy (liczbę uczniów do wczytania).
+        zwracana wartość:   int[] wyniki - jednowymiarowa tablica liczb całkowitych zwierająca 
+                            wyniki testu wszystkich uczniów.
+        autor:              zdajacy nr 1
+        */
+        static int[] WczytajWynikiUczniow(int liczbaUczniow)
+        {
+            int[] wyniki = new int[liczbaUczniow];
+            for (int i = 0; i < liczbaUczniow; i++)
+            {
+                while (true)
+                {
+                    Console.Write($"Podaj wynik dla ucznia {i + 1} (zakres 0-100): ");
+                    if (int.TryParse(Console.ReadLine(), out int wynik) && wynik >= 0 && wynik <= 100)
+                    {
+                        wyniki[i] = wynik;
+                        break;
+                    }
+                    Console.WriteLine("Błąd! Wynik musi być liczbą całkowitą z zakresu od 0 do 100.");
+                }
+            }
+            return wyniki;
+        }
+
+        /*
+        nazwa funkcji:      ObliczSrednia
+        opis:               Funkcja oblicza średnią arytmetyczną wszystkich ocen 
+                            znajdujących się w przekazanej tablicy wyników.
+        opis parametrów:    int[] tablicaWynikow - jednowymiarowa tablica liczb 
+                            całkowitych z punktami uczniów
+        zwracana wartość:   (double)suma / tablicaWynikow.Length; - liczba zmiennoprzecinkowa podwójnej precyzji 
+                            będąca średnią arytmetyczną wyników lub 0 w przypadku pustej tablicy.
+        autor:              zdajacy nr 1
+        */
+        static double ObliczSrednia(int[] tablicaWynikow)
+        {
+            if (tablicaWynikow == null || tablicaWynikow.Length == 0) return 0;
+
+            int suma = 0;
+            foreach (int wynik in tablicaWynikow)
+            {
+                suma += wynik;
+            }
+            return (double)suma / tablicaWynikow.Length;
+        }
+
+        /*
+        nazwa funkcji:      PoliczZaliczone
+        opis:               Funkcja zlicza ilu uczniów uzyskało wynik dający 
+                            zaliczenie testu, czyli co najmniej 50 punktów.
+        opis parametrów:    int[] tablicaWynikow - jednowymiarowa tablica liczb 
+                            całkowitych przechowująca punkty uczniów.
+        zwracana wartość:   int licznikZaliczonych - liczba całkowita określająca liczbę uczniów, 
+                            którzy zdobyli 50 lub więcej punktów.
+        autor:              zdajacy nr 1
+        */
+        static int PoliczZaliczone(int[] tablicaWynikow)
+        {
+            if (tablicaWynikow == null) return 0;
+
+            int licznikZaliczonych = 0;
+            foreach (int wynik in tablicaWynikow)
+            {
+                if (wynik >= 50)
+                {
+                    licznikZaliczonych++;
+                }
+            }
+            return licznikZaliczonych;
+        }
+    }
+}
