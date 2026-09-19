@@ -1,0 +1,19 @@
+Zewnętrzne % 10 we wzorze cyfry kontrolnej jest istotne. Gdy reszta z dzielenia sumy wynosi 0, wyrażenie 10 - 0 daje 10, a poprawna cyfra kontrolna nie może być dwucyfrowa. Dodatkowe % 10 zamienia 10 z powrotem na 0. To częsta pułapka, przez którą programy błędnie odrzucają poprawne numery. 8
+
+np.
+PESEL: 9001010003.
+Suma ważona dla pierwszych 10 cyfr:
+9 * 1 = 9
+0 * 3 = 0
+0 * 7 = 0
+1 * 9 = 9
+0 * 1 = 0
+1 * 3 = 3
+0 * 7 = 0
+0 * 9 = 0
+0 * 1 = 0
+3 * 3 = 9
+Suma iloczynów: 9 + 0 + 0 + 9 + 0 + 3 + 0 + 0 + 0 + 9 = 30
+Reszta: 30 % 10 = 0
+Wersja bez zewnętrznego "% 10": 10 - 0 = 10 — algorytm twierdzi, że cyfrą kontrolną powinno być 10. System odrzuca prawidłowy numer 90010100030, uznając go za błędny.
+Wersja poprawna: 10 - 0 % 10 = 10 % 10 = 0 — algorytm poprawnie wskazuje cyfrę 0. Pełny, prawidłowy numer PESEL to 90010100030.

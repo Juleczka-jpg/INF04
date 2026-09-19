@@ -1,0 +1,1 @@
+Tablicę liczników wystąpień deklarujemy o rozmiarze 50, ponieważ indeks odpowiada wartości liczby - indeks 0 pozostaje nieużywany.
