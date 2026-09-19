@@ -20,7 +20,6 @@ namespace ConsoleApp6
         }
 
         /*
-        *************************************************************************
         nazwa funkcji:      WczytajLiczbeUczniow
         opis:               Funkcja pobiera od użytkownika liczbę uczniów w klasie. 
                             Pętla wymusza podanie poprawnej liczby całkowitej większej od 0.
@@ -28,7 +27,6 @@ namespace ConsoleApp6
         zwracana wartość:   int liczba - liczba całkowita reprezentująca poprawnie wprowadzoną 
                             liczbę uczniów.
         autor:              zdajacy nr 1
-        *************************************************************************
         */
         static int WczytajLiczbeUczniow()
         {
@@ -45,6 +43,7 @@ namespace ConsoleApp6
         }
 
         /*    
+        nazwa funkcji:      WczytajWynikiUczniow
         opis:               Funkcja tworzy tablicę wyników i uzupełnia ją wartościami 
                             pobranymi od użytkownika z zakresu od 0 do 100 punktów.
         opis parametrów:    int liczbaUczniow - liczba całkowita określająca rozmiar 
